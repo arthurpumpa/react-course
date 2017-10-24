@@ -1,4 +1,4 @@
-//mocks server call
+// mocks server call
 export default () => {
     return new Promise((resolve) => {
         const products = [
@@ -19,4 +19,4 @@ export default () => {
             resolve(products);
         }, 500);
     });
-}
+};
