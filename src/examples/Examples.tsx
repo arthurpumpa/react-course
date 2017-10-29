@@ -10,7 +10,7 @@ import Refs from './refs/Refs';
 import IsolatedContext from './context/IsolatedContext';
 import Toggle from './events/Toggle';
 import HomeWork from './homeworks/HomeWork';
-import ReduxShopExample from './shop/ReduxShopExample';
+import ReduxExample from './redux/ReduxExample';
 
 class Examples extends React.Component {
     render() {
@@ -29,7 +29,7 @@ class Examples extends React.Component {
                                 <li className="list-group-item"><Link to={'/refs'}>6. Refs</Link></li>
                                 <li className="list-group-item"><Link to={'/context'}>7. Context</Link></li>
                                 <li className="list-group-item"><Link to={'/home-work'}>8. Home Work</Link></li>
-                                <li className="list-group-item"><Link to={'/redux-shop'}>9. Redux shop</Link></li>
+                                <li className="list-group-item"><Link to={'/redux/shop'}>9. Redux shop</Link></li>
                             </ul>
                         </div>
 
@@ -42,7 +42,7 @@ class Examples extends React.Component {
                                 <Route path="/refs" component={Refs}/>
                                 <Route path="/context" component={IsolatedContext}/>
                                 <Route path="/home-work" component={HomeWork}/>
-                                <Route path="/redux-shop" component={ReduxShopExample}/>
+                                <Route path="/redux" component={ReduxExample}/>
                             </Switch>
                         </div>
                     </div>

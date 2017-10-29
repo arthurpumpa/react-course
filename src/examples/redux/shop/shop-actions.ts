@@ -1,5 +1,5 @@
 import { Dispatch } from 'react-redux';
-import mockFetchProducts from '../homeworks/fetchProducts';
+import mockFetchProducts from '../../homeworks/fetchProducts';
 import { Product } from './shop-reducer';
 
 export const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART';

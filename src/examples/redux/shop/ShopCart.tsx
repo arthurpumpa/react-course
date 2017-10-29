@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { ICartItem, ShopState } from './shop-reducer';
+import { ICartItem } from './shop-reducer';
 import { bindActionCreators, Dispatch } from 'redux';
 import { removeProductFromCart } from './shop-actions';
+import { IAppState } from '../root-reducers';
 
 interface IStateProps {
     cart: ICartItem[];
@@ -97,9 +98,9 @@ class ShopCart extends React.Component<IStateProps & IDispatchProps> {
     ))
 }
 
-const mapStateToProps = (state: ShopState): IStateProps => {
+const mapStateToProps = (state: IAppState): IStateProps => {
     return {
-        cart: state.cart
+        cart: state.shop.cart
     };
 };
 

@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { Product, ShopState } from './shop-reducer';
+import { Product } from './shop-reducer';
 import { bindActionCreators, Dispatch } from 'redux';
 import * as actions from './shop-actions';
+import { IAppState } from '../root-reducers';
 
 interface IStateProps {
     allProducts: Product[];
@@ -67,9 +68,9 @@ class ShopList extends React.Component<IStateProps & IDispatchProps> {
     ))
 }
 
-const mapStateToProps = (state: ShopState): IStateProps => {
+const mapStateToProps = (state: IAppState): IStateProps => {
     return {
-        allProducts: state.allProducts
+        allProducts: state.shop.allProducts
     };
 };
 
