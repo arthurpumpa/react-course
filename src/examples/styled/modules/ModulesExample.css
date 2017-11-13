@@ -1,0 +1,18 @@
+.DottedBox {
+    margin: 40px;
+    border: 5px dotted pink;
+    box-sizing: border-box;
+}
+
+.DottedBox__font {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.DottedBox__color {
+    color: red;
+}
+
+.DottedBox_content {
+    text-align: center;
+}

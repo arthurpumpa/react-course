@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Field, InjectedFormProps, reduxForm } from 'redux-form';
+import { required } from './validators';
+import CustomInput from './CustomInput';
 
 const SimpleForm = (props: InjectedFormProps) => {
     const {handleSubmit, reset, pristine} = props;
@@ -9,10 +11,8 @@ const SimpleForm = (props: InjectedFormProps) => {
                 <label htmlFor="firstName">First Name</label>
                 <Field
                     name="firstName"
-                    component="input"
-                    type="text"
-                    placeholder="First Name"
-                    props={{className: 'form-control'}}
+                    component={CustomInput}
+                    warn={[required]}
                 />
             </div>
 
@@ -36,7 +36,7 @@ const SimpleForm = (props: InjectedFormProps) => {
                         type="radio"
                         value="option2"
                     />
-                   Option 2
+                    Option 2
                 </label>
             </div>
 

@@ -11,6 +11,8 @@ import IsolatedContext from './context/IsolatedContext';
 import Toggle from './events/Toggle';
 import HomeWork from './homeworks/HomeWork';
 import ReduxExample from './redux/ReduxExample';
+import CSSExample from './styled/css/CSSExample';
+import ModulesExample from './styled/modules/ModulesExample';
 
 class Examples extends React.Component {
     render() {
@@ -30,6 +32,9 @@ class Examples extends React.Component {
                                 <li className="list-group-item"><Link to={'/context'}>7. Context</Link></li>
                                 <li className="list-group-item"><Link to={'/home-work'}>8. Home Work</Link></li>
                                 <li className="list-group-item"><Link to={'/redux/shop'}>9. Redux shop</Link></li>
+                                <li className="list-group-item"><Link to={'/redux/form'}>10. Redux form</Link></li>
+                                <li className="list-group-item"><Link to={'/styles/css'}>11. CSS stylesheets</Link></li>
+                                <li className="list-group-item"><Link to={'/styles/modules'}>12. CSS Modules</Link></li>
                             </ul>
                         </div>
 
@@ -43,6 +48,8 @@ class Examples extends React.Component {
                                 <Route path="/context" component={IsolatedContext}/>
                                 <Route path="/home-work" component={HomeWork}/>
                                 <Route path="/redux" component={ReduxExample}/>
+                                <Route path="/styles/css" component={CSSExample}/>
+                                <Route path="/styles/modules" component={ModulesExample}/>
                             </Switch>
                         </div>
                     </div>
